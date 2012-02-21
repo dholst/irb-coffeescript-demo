@@ -6,8 +6,10 @@ gem 'sqlite3'
 gem 'twitter-bootstrap-rails'
 
 group :development, :test do
+  gem 'growl'
   gem 'guard-jasmine'
   gem 'jasminerice'
+  gem 'rb-fsevent'
 end
 
 group :assets do
