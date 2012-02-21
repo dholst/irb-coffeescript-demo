@@ -1,0 +1,48 @@
+// Place all the styles related to the donations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#donation_card {
+  float: left;
+}
+
+.cc {
+  float: left;
+  margin-left: 10px;
+
+  &.visa {
+    background: image-url('cards-all.png') no-repeat -29px -57px;
+    width: 43px;
+    height: 26px;
+
+    &.on {
+      background: image-url('cards-all.png') no-repeat -1px -1px;
+      width: 44px;
+      height: 27px;
+    }
+  }
+
+  &.mastercard {
+    background: image-url('cards-all.png') no-repeat -79px -57px;
+    width: 44px;
+    height: 26px;
+
+    &.on {
+      background: image-url('cards-all.png') no-repeat -52px -1px;
+      width: 44px;
+      height: 27px;
+    }
+  }
+
+  &.discover {
+    background: image-url('cards-all.png') no-repeat -127px -57px;
+    width: 43px;
+    height: 26px;
+
+    &.on {
+      background: image-url('cards-all.png') no-repeat -99px -1px;
+      width: 44px;
+      height: 27px;
+    }
+  }
+}

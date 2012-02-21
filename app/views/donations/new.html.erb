@@ -1,0 +1,23 @@
+<%= form_for @donation, :url => donations_path, :html => { :class => :form } do |f| -%>
+  <div class="clearfix">
+    <%= f.label :amount, t("activerecord.attributes.donation.amount", :default => "Amount"), :class => :label %>
+    <div class="input">
+      <%= f.text_field :amount, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="clearfix">
+     <%= f.label :card, t("activerecord.attributes.donation.card", :default => "Card"), :class => :label %>
+    <div class="input">
+      <%= f.text_field :card, :class => 'text_field' %>
+      <div class="cc visa"></div>
+      <div class="cc mastercard"></div>
+      <div class="cc discover"></div>
+    </div>
+  </div>
+
+  <div class="form-actions" style="clear: both;">
+    <button class="btn primary" type="submit">Send It!</button> or
+    <%= link_to "Cancel", donations_path %>
+  </div>
+<% end -%>

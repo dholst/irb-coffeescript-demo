@@ -1,0 +1,21 @@
+<h1>Donations</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th><%= t("activerecord.attributes.donation.amount", :default => t("activerecord.labels.amount", :default => "Amount")) %></th>
+      <th>Created at</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @donations.each do |donation| -%>
+      <tr>
+        <td><%= donation.id %></td>
+        <td><%= donation.amount %></td>
+        <td><%= donation.created_at %></td>
+      </tr>
+    <% end -%>
+  </tbody>
+</table>
+
+<%= link_to "New", new_donation_path, :class => 'btn btn-primary' %>
